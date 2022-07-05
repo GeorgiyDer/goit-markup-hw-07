@@ -82,8 +82,13 @@ textarea {
     width: 1200px;
 }
 
+
+
 /* header */
-.logo {
+
+
+
+.main-nav__logo {
     font-family: 'Raleway';
     color: var(--main-text-color);
     font-size: 26px;
@@ -91,11 +96,11 @@ textarea {
 
 }
 
-.acent  {
+.main-nav__logo--acent  {
     color: var(--brand-color);
     
 }
-.header .container {
+.header__container {
     display: flex;
     align-items: center;
 }
@@ -113,20 +118,18 @@ textarea {
     font-size: 14px;
     line-height: 1.143;
 }
-.site-nav div:not(:last-child) {
-    margin-right: 50px;
-}
-.site-nav .link.current {
-    color: var(--brand-color);
-}
-.site-nav .link {
+
+.site-nav__link {
     display: block;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     padding-top: 32px;
     padding-bottom: 32px;
 }
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav__link--current {
+    color: var(--brand-color);
+}
+.site-nav__link:hover,
+.site-nav__link:focus {
     color: var(--brand-color);
 }
 .contacts-nav {
@@ -134,10 +137,10 @@ textarea {
     display: flex;
     align-items: center;
 }
-.contacts-nav .item:not(:last-child) {
+.contacts-nav__item:not(:last-child) {
     margin-right: 50px;
 }
-.contacts-nav .link {
+.contacts-nav__link {
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -153,8 +156,11 @@ textarea {
        position: relative;
        overflow: hidden;
 }
-
-.site-nav .current::after {
+.site-nav__item--position {
+    position: relative;
+    overflow: hidden;
+}
+.site-nav__link--current::after {
     display: block;
     content: '';
     position: absolute;
@@ -172,28 +178,29 @@ textarea {
 
 /* ИКОНКИ контактов */
 
-.link-icon {
+.contacts-nav__link {
     display: inline-flex;
     align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-email {
+
+.contacts-nav__icon {
     fill: currentColor;
     margin-right: 10px;
     
 }
-.link-icon:hover {
+
+
+.contacts-nav__link:hover,
+.contacts-nav__link:focus {
     color: var(--brand-color);
 }
 
 
-
-
-.contacts-nav .link:hover,
-.contacts-nav .link:focus {
-    color: var(--brand-color);
-}
 /* main */
+
+/* Hero */
+
 .hero {
     padding-top: 200px; 
     padding-bottom: 200px;
@@ -213,12 +220,11 @@ textarea {
     rgba(47, 48, 58, 0.4), 
     rgba(47, 48, 58, 0.4)),
     url(../images/Imghero\ \(1\).jpg);
-    
-    
-    
-    
+      
 }
-.hero .title {
+
+
+.hero__title {
     width: 650px;
     margin-left: auto;
     margin-right: auto;
@@ -228,6 +234,7 @@ textarea {
     font-size: 44px;
     line-height: 1.363;
 }
+
 .button {
     cursor: pointer;
     background-color: var(--brand-color);
@@ -256,32 +263,33 @@ textarea {
     margin: -1px;
     border: 0;
     padding: 0;
-
     white-space: nowrap;
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
 
-.benefits .list {
+.benefits__list {
     display: flex;
 }
-.benefits .item {
+
+.benefits__item {
     width: 270px;
 }
-.benefits .item:not(:last-child) {
+
+.benefits__item:not(:last-child) {
     margin-right: 30px;
 }
 
 
-.title-benefits {
+.benefits__title {
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.143;
 }
 
 
-.description-benefits {
+.benefits__description {
     color: var(--secondary-text-color);
     line-height: 1.714;
 }
@@ -289,6 +297,7 @@ textarea {
 
 
 /* ИКОНКИ ПРЕИМУЩЕСТВ */
+
 .attention {
     display: flex;
     align-items: center;
@@ -299,23 +308,22 @@ textarea {
     margin-bottom: 30px;
     
 }
-.icon-attention {
+.attention__icon {
     width: 70px;
     height: 70px;
     
 }
 
 
+/*examples */
 
 
-
-
-.section.examples {
+.examples {
     padding-top: 0;
     
 }
 
-.examples .list {
+.examples__list {
     display: flex;
     justify-content: space-between;
 }
@@ -346,7 +354,7 @@ textarea {
     background: rgba(47, 48, 58, 0.8);
 }
 
-.position .title {
+.examples__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.142em;
@@ -356,46 +364,51 @@ textarea {
     
 }
 
-
-
+.examples__item--position {
+    position: relative;
+    overflow: hidden;
+}
+ 
 
 /* наша команда */
+
 .team   {
     background-color: #F5F4FA;
 
 }
-.team .item {
+
+.team__item {
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     text-align: center;
 }
-.team .title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.166;
+
+.team__list {
+    display: flex;
+    justify-content: space-between;
 }
-.name {
+
+.team-info {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.team-info__name {
     margin-bottom: 10px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.187;
 }
-.profession {
+
+.team-info__profession {
     margin-top: 0px;
     margin-bottom: 16px;
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.187;
 }
-.team-info {
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.team-list {
-    display: flex;
-    justify-content: space-between;
-}
+
 
 
 /* ИКОНКИ КОМАНДІ */
@@ -916,7 +929,7 @@ textarea {
 
 .button-form {
     display: block;
-    margin: 0 auto;
+    margin: auto;
     width: 200px;
     height: 50px;
     padding: 10px 55px;
