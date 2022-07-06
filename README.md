@@ -56,3 +56,6 @@ cursor: pointer; **\*\*\*\***
 font-family: 'Roboto'; \*\***\*\***\*
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); **\*\*
 }
+
+$ - переменная
+& - родительское имя класса
