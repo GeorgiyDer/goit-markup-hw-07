@@ -1,3 +1,10 @@
 @import './utils/vars';
-@import './utils/reset';
-@import './components/page-header';
+@import './base/commom';
+@import './base/reset';
+@import './components/section';
+@import './components/container';
+@import './layout/page-header';
+@import './layout/main-page';
+@import './layout/page-footer';
+@import './layout/page-modal';
+@import './layout/page-portfolio';
