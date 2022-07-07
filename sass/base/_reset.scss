@@ -18,10 +18,7 @@ ul {
     padding: 0;
 }
 
-a:active,
-a:focus {
-    outline: none;
-}
+
 
 input,
 textarea {
@@ -33,9 +30,6 @@ textarea:active {
     outline: none;
 }
 
-:focus {
-    outline: none;
-}
 
 textarea {
     resize: none;
@@ -70,4 +64,6 @@ textarea {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+
 
